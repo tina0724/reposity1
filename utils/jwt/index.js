@@ -3,9 +3,9 @@ const { v4: uuidv4 } = require('uuid')
 
 // 签名的密钥
 const jwt_secret = 'mySecretKey'
-// token过期时间为1天，不然测试老是过期=_=!
-const jwt_access_expiration = 60 * 60 * 24
-const jwt_refresh_expiration = jwt_access_expiration * 10
+
+const jwt_access_expiration = 60 * 60 * 24 *100
+const jwt_refresh_expiration = jwt_access_expiration * 100
 
 const createJwt = ({ account, role_id }) => {
   const maxage = new Date().valueOf()
